@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+      "**/bin": true,
+      "**/obj": true
+  },
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4,
+  "prettier.vueIndentScriptAndStyle": true,
+  "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+  "dotnet.defaultSolution": "dotnet/src/Paaralan.sln",
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false
+}
