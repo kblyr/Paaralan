@@ -8,6 +8,9 @@ sealed class Mapping : IRegister
     {
         config.ForType<CreateUser.Response, CreateUserAPI.Response>()
             .Map(dest => dest.Id, src => HashIdConverterInstance.Instance.FromInt32(src.Id));
+
+        config.ForType<SearchUser.Response.UserObj, SearchUserAPI.Response.UserObj>()
+            .Map(dest => dest.Id, src => HashIdConverterInstance.Instance.FromInt32(src.Id));
     }
 }
 
@@ -17,6 +20,7 @@ sealed class ResponseTypeMapRegistration : IResponseTypeMapRegistration
     {
         registry
             .RegisterCreated<CreateUser.Response, CreateUserAPI.Response>()
+            .RegisterOK<SearchUser.Response, SearchUserAPI.Response>()
             .RegisterBadRequest<UsernameAlreadyExists, UsernameAlreadyExistsAPI>()
         ;
     }
