@@ -40,7 +40,7 @@ sealed class CreateUserHDL : ICQRSRequestHandler<CreateUser.Request>
 
         if (passwordHashResult is PasswordHashComputeErrorResult || passwordHashResult is not PasswordHashComputeSuccessResult passwordHashSuccess)
         {
-            return new Error();
+            return Failed.Instance;
         }
 
         var auditInfo = _auditInfoProvider.Value;
