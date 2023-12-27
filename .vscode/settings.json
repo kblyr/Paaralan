@@ -7,6 +7,6 @@
   "editor.tabSize": 4,
   "prettier.vueIndentScriptAndStyle": true,
   "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
-  "dotnet.defaultSolution": "dotnet/src/Paaralan.sln",
+  "dotnet.defaultSolution": "dotnet/Paaralan.sln",
   "vue3snippets.enable-compile-vue-file-on-did-save-code": false
 }
